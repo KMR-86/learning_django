@@ -1,12 +1,12 @@
 from django.db import models
 
-from datetime import datetime
 from django.utils import timezone
-import pytz
+
 
 # Create your models here.
 class blog(models.Model):
-    title = models.TextField()
+    title = models.CharField(max_length=120)
     content = models.TextField()
     time = models.DateTimeField(default=timezone.now, blank=True)
-    creator = models.TextField()
+    creator = models.CharField(max_length=60)
+    likes = models.IntegerField()
