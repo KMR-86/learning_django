@@ -3,13 +3,14 @@ from django.http import HttpResponse
 
 
 # Create your views here.
-def home_view(*args, **kwargs):
-    return HttpResponse("<h1>home page</h1>")
+def home_view(request, *args, **kwargs):
+    # return HttpResponse("<h1>home page</h1>")
+    return render(request, "home.html", {})
 
 
-def education_view(*args, **kwargs):
-    return HttpResponse("<h1>education page</h1>")
+def education_view(request,*args, **kwargs):
+    return render(request, "education.html", {})
 
 
-def achievement_view(*args, **kwargs):
-    return HttpResponse("<h1>achievement page</h1>")
+def achievement_view(request,*args, **kwargs):
+    return render(request, "achievement.html", {})
