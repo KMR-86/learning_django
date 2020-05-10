@@ -19,8 +19,10 @@ from django.urls import path
 from pages.views import home_view
 from pages.views import education_view
 from pages.views import achievement_view
+from pages.views import index_view
 
 urlpatterns = [
+    path('', index_view, name='index'),
     path('admin/', admin.site.urls),
     path("home/", home_view, name='home'),
     path("achievement/", achievement_view, name='achievement'),

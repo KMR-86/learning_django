@@ -6,6 +6,14 @@
 </head>
 <body>
 <h1>home page</h1>
+<h3>username: {{ username }}</h3>
+<h4>frinds:</h4>
+<ul>
+    {% for friend in friendlist %}
+        <li>{{ friend }}</li>
+    {% endfor %}
+</ul>
+
 <h3>this is a template</h3>
 </body>
 </html>
