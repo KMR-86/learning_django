@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data output</title>
+</head>
+<body>
+here we are going to output all the users and there info:
+
+{% for o in obj %}
+<h1>{{ o.name }}</h1>
+<img src="{{ o.profile_picture.url }}" width="500" height="500" ><h2>{{ o.profile_bio }}</h2>
+<h3>{{ o.total_friends }}</h3>
+{% endfor %}
+</body>
+</html>
