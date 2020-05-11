@@ -21,7 +21,7 @@ from pages.views import education_view
 from pages.views import achievement_view
 from pages.views import index_view
 from User.views import user_output_data_view
-
+from User.views import user_input_data_view
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -33,7 +33,8 @@ urlpatterns = [
     path("home/", home_view, name='home'),
     path("achievement/", achievement_view, name='achievement'),
     path("education/", education_view, name='education'),
-    path("user/output/", user_output_data_view, name="user_output")
+    path("user/output/", user_output_data_view, name="user_output"),
+    path("user/input/", user_input_data_view, name="user_input")
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
